@@ -8,19 +8,17 @@ import {User} from "./entity/User";
 
 createConnection().then(async connection => {
 
-    console.log("Inserindo uma nova usuario no banco de dados...");
+    console.log("Inserindo um novo usuario no banco de dados...");
     const user = new User();
     user.firstName = "Jones";
     user.lastName = "S. Brito";
     user.age = 20;
     await connection.manager.save(user);
-    console.log("Saved a new user with id: " + user.id);
+    console.log("Savando usuario com id: " + user.id);
 
-    console.log("Loading users from the database...");
+    console.log("Carregando usuario no banco de dados...");
     const users = await connection.manager.find(User);
     console.log("Loaded users: ", users);
-
-    console.log("Here you can setup and run express/koa/any other framework.");
 
 }).catch(error => console.log(error));
 
@@ -36,11 +34,10 @@ createConnection().then(async connection => {
     await connection.manager.save(loja);
     console.log("Saved a new user with id: " + loja.id);
 
-    console.log("Loading users from the database...");
+    console.log("Carregando lojas do banco de dados...");
     const lojas = await connection.manager.find(Loja);
     console.log("Loaded Lojas: ", lojas);
 
-    console.log("Here you can setup and run express/koa/any other framework.");
 
 }).catch(error => console.log(error));
 
@@ -54,11 +51,10 @@ createConnection().then(async connection => {
     await connection.manager.save(profissional);
     console.log("Saved a new user with id: " + profissional.id);
 
-    console.log("Loading users from the database...");
+    console.log("Carregando users from the database...");
     const profissionais = await connection.manager.find(Profissional);
     console.log("Loaded profissional: ", profissionais);
 
-    console.log("Here you can setup and run express/koa/any other framework.");
 
 }).catch(error => console.log(error));
 
@@ -72,10 +68,9 @@ createConnection().then(async connection => {
     await connection.manager.save(restaurante);
     console.log("Saved a new user with id: " + restaurante.id);
 
-    console.log("Loading users from the database...");
+    console.log("Carregando restaurante do banco de dados...");
     const restaurantes = await connection.manager.find(Restaurante);
     console.log("Loaded restaurante : ", restaurantes);
 
-    console.log("Here you can setup and run express/koa/any other framework.");
 
 }).catch(error => console.log(error));
