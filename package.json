@@ -1,7 +1,7 @@
 {
    "name": "backend",
    "version": "0.0.1",
-   "description": "Awesome project developed with TypeORM.",
+   "description": "Teste 01 Backend.",
    "devDependencies": {
       "@types/node": "^8.10.66",
       "nodemon": "^2.0.12",
@@ -9,6 +9,7 @@
       "typescript": "3.3.3333"
    },
    "dependencies": {
+      "async": "^3.2.0",
       "debug": "^4.3.2",
       "express": "^4.17.1",
       "pg": "^8.6.0",
