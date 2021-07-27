@@ -1,4 +1,4 @@
-const app = require('../src/app');
+const app = require('../src/index.ts');
 const http = require('http');
 const debug = require('debug')('nodestr:server');
 
@@ -17,7 +17,7 @@ function normalizePort(val) {
   return false;
 }
 
-const port = normalizePort(process.env.PORT || 5000);
+const port = normalizePort(process.env.PORT || 3000);
 app.set('port', port);
 
 // error handler
